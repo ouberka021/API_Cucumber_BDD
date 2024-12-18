@@ -48,17 +48,23 @@ public class BookitUtils {
 
         switch (role) {
             case "teacher":
-                email = ConfigurationReader.getProperty("teacher_email") ;
-                password = ConfigurationReader.getProperty("teacher_password") ;
+               // email = ConfigurationReader.getProperty("teacher_email") ;
+                email = System.getenv("TEACHER_EMAIL") ;
+              //  password = ConfigurationReader.getProperty("teacher_password") ;
+                password = System.getenv("TEACHER_PASSWORD") ;
                 break;
 
             case "team_member":
-                email = ConfigurationReader.getProperty("team_member_email") ;
-                password = ConfigurationReader.getProperty("team_member_password");
+               // email = ConfigurationReader.getProperty("team_member_email") ;
+                email =  System.getenv("TEAM_MEMBER_EMAIL");
+               // password = ConfigurationReader.getProperty("team_member_password");
+                password =  System.getenv("TEAM_MEMBER_PASSWORD");
                 break;
             case "team_leader":
-                email = ConfigurationReader.getProperty("team_leader_email") ;
-                password = ConfigurationReader.getProperty("team_leader_password") ;
+              //  email = ConfigurationReader.getProperty("team_leader_email") ;
+                email = System.getenv("TEAM_LEADER_EMAIL") ;
+              //  password = ConfigurationReader.getProperty("team_leader_password") ;
+                password = System.getenv("TEAM_LEADER_PASSWORD") ;
                 break;
 
             default:
